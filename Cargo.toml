@@ -12,11 +12,11 @@ categories = ["gui"]
 
 [dependencies]
 macroquad = { version = "0.4.5", default-features = false }
-yakui-miniquad = "0.3.0"
+yakui-miniquad = { git = "https://github.com/juh9870/yakui-miniquad.git", branch = "yakui_main" }
 send_wrapper = "0.6.0"
 
 [dev-dependencies]
-yakui = "0.2.0"
+yakui = { git = "https://github.com/SecondHalfGames/yakui.git", rev = "2ea1ecc691b2391d237502637d707d0e2fee15fc" }
 
 [[example]]
 name = "hello-world"
