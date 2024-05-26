@@ -144,7 +144,7 @@ pub fn cfg<F: FnOnce(&mut yakui_core::Yakui)>(f: F) {
 /// Gives you direct access to the vector of user textures managed by
 /// [YakuiMiniQuad] within the scope of the closure passed
 pub fn user_textures<F: FnOnce(&mut Vec<TextureId>) -> R, R>(f: F) -> R {
-    f(get_yakui().0.user_textures())
+    f(get_yakui().as_mut().unwrap().0.user_textures())
 }
 
 /// Draws the yakui ui. Must be called after `finish`/`ui` and once per frame.
