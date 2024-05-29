@@ -16,7 +16,7 @@ yakui-miniquad = { git = "https://github.com/juh9870/yakui-miniquad.git", branch
 send_wrapper = "0.6.0"
 
 [dev-dependencies]
-yakui = { git = "https://github.com/SecondHalfGames/yakui.git", rev = "2ea1ecc691b2391d237502637d707d0e2fee15fc" }
+yakui = { git = "https://github.com/SecondHalfGames/yakui.git", rev = "7346eb7bc011c95fb82502dacecb92f086389474" }
 
 [[example]]
 name = "hello-world"
