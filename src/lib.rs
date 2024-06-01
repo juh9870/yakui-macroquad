@@ -137,8 +137,8 @@ pub fn ui<F: FnOnce(&mut yakui_core::Yakui)>(f: F) {
 }
 
 /// Allows you configure the yakui context within the scope of the closure passed, if you need to.
-pub fn cfg<F: FnOnce(&mut yakui_core::Yakui)>(f: F) {
-    f(get_yakui().as_mut().unwrap().0.ctx());
+pub fn cfg<F: FnOnce(&mut yakui_core::Yakui) -> T, T>(f: F) -> T {
+    f(get_yakui().as_mut().unwrap().0.ctx())
 }
 
 /// Gives you direct access to the vector of user textures managed by
